@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      {% if page.lede %}
+        <p class="page-lede">{{ page.lede }}</p>
+      {% endif %}
+      {% if page.lede_zh %}
+        <p class="page-lede" lang="zh-Hans">{{ page.lede_zh }}</p>
+      {% endif %}
+    </div>
+  </header>
+  <div class="container page-body">
+    {{ content }}
+  </div>
+</article>

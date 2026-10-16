@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name">{{ site.title }}</p>
+      <p>{{ site.tagline }}</p>
+      <p lang="zh-Hans">{{ site.data.lab.tagline_zh }}</p>
+    </div>
+    <div>
+      <p class="footer-label">Visit</p>
+      <ul>
+        <li><a href="mailto:{{ site.data.lab.email }}">{{ site.data.lab.email }}</a></li>
+        <li><a href="{{ site.data.lab.pi_site }}">{{ site.data.lab.pi_name }} <span lang="zh-Hans">{{ site.data.lab.pi_name_zh }}</span></a></li>
+        <li><a href="{{ site.data.lab.github }}">GitHub · {{ site.data.lab.github_label }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-label">Affiliation</p>
+      <p>{{ site.data.lab.affiliation.name_en }}</p>
+      <p lang="zh-Hans">{{ site.data.lab.affiliation.name_zh }}</p>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <p><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+  </div>
+</footer>

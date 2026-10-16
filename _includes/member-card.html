@@ -1,0 +1,42 @@
+{% assign person = include.member %}
+<article class="member-card{% if include.featured %} is-featured{% endif %}{% if person.placeholder %} is-placeholder{% endif %}">
+  <div class="avatar" aria-hidden="true">
+    {% if person.photo and person.photo != "" %}
+      <img src="{{ person.photo | relative_url }}" alt="">
+    {% else %}
+      <span>{{ person.initials | default: person.name | slice: 0 }}</span>
+    {% endif %}
+  </div>
+  <div class="member-body">
+    {% if person.placeholder %}
+      <p class="badge">Placeholder · 占位</p>
+    {% endif %}
+    <h2>
+      {{ person.name }}
+      {% if person.name_zh %}
+        <span lang="zh-Hans">{{ person.name_zh }}</span>
+      {% endif %}
+    </h2>
+    {% if person.group_role and person.group_role != "" %}
+      <p class="member-role">{{ person.group_role }}{% if person.group_role_zh %} · <span lang="zh-Hans">{{ person.group_role_zh }}</span>{% endif %}</p>
+    {% endif %}
+    {% if person.role %}
+      <p class="member-title">{{ person.role }}{% if person.role_zh %} · <span lang="zh-Hans">{{ person.role_zh }}</span>{% endif %}</p>
+    {% endif %}
+    {% if person.bio_en %}
+      <p>{{ person.bio_en }}</p>
+    {% endif %}
+    {% if person.bio_zh %}
+      <p lang="zh-Hans">{{ person.bio_zh }}</p>
+    {% endif %}
+    {% if person.links and person.links.size > 0 %}
+      <ul class="link-row">
+        {% for link in person.links %}
+          <li>
+            <a href="{{ link.url }}"{% if link.url contains "://" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>

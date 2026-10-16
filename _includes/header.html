@@ -1,0 +1,28 @@
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/mark.svg' | relative_url }}" width="32" height="32" alt="">
+      <span>{{ site.title }}</span>
+    </a>
+    <div class="nav-wrap">
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-button" for="nav-toggle">
+        <span class="nav-button-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        {% for item in site.data.navigation %}
+          {% assign here = page.url %}
+          {% assign active = false %}
+          {% if item.url == "/" %}
+            {% if here == "/" %}{% assign active = true %}{% endif %}
+          {% elsif here == item.url or here contains item.url %}
+            {% assign active = true %}
+          {% endif %}
+          <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>

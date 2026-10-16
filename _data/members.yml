@@ -1,0 +1,50 @@
+# One entry per person. Photos are optional.
+# Place image files in assets/images/people/ and set photo to a root-relative path,
+# for example: /assets/images/people/dong-wang.jpg
+#
+# Fields:
+#   name, name_zh, initials, role, role_zh, group_role, group_role_zh
+#   photo, email, bio_en, bio_zh, pi (true for the principal investigator)
+#   links: list of {label, url}
+#   placeholder: true shows a visible placeholder badge
+
+- name: Dong Wang
+  name_zh: 王东
+  initials: 王
+  role: Assistant Professor
+  role_zh: 助理教授
+  group_role: Principal Investigator
+  group_role_zh: 课题组长
+  photo: ""
+  email: csdwang@ncepu.edu.cn
+  pi: true
+  bio_en: >-
+    Dong Wang leads Geneticode Lab. A longer biography has not been added yet.
+  bio_zh: >-
+    王东负责 Geneticode Lab。详细简介尚未填写。
+  links:
+    - label: Homepage
+      url: https://dwang.net
+    - label: Email
+      url: mailto:csdwang@ncepu.edu.cn
+    - label: GitHub
+      url: https://github.com/geneticodelab
+
+- name: "[Placeholder] Given Family"
+  name_zh: "[占位] 姓名"
+  initials: "+"
+  role: "[Placeholder] Role, for example PhD student"
+  role_zh: "[占位] 身份，例如博士生"
+  group_role: ""
+  group_role_zh: ""
+  photo: ""
+  email: ""
+  pi: false
+  placeholder: true
+  bio_en: >-
+    Replace this card in _data/members.yml. To add a photo, put an image in
+    assets/images/people/ and set photo to /assets/images/people/your-file.jpg.
+  bio_zh: >-
+    请在 _data/members.yml 中替换此卡片。如需照片，将图片放入 assets/images/people/，并把 photo 设为
+    /assets/images/people/your-file.jpg。
+  links: []

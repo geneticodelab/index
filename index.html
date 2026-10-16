@@ -1,0 +1,95 @@
+---
+layout: default
+title: Geneticode Lab
+description: >-
+  Decoding genetic codes, mapping biological functions. Computational biology
+  lab of Dong Wang (王东) at North China Electric Power University.
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span>{{ site.data.lab.affiliation.name_en }}</span>
+        <span lang="zh-Hans">{{ site.data.lab.affiliation.name_zh }}</span>
+      </p>
+      <h1>{{ site.title }}</h1>
+      <p class="tagline">{{ site.tagline }}</p>
+      <p class="tagline-zh" lang="zh-Hans">{{ site.data.lab.tagline_zh }}</p>
+      <div class="hero-intro">
+        <p>{{ site.data.lab.intro_en }}</p>
+        <p lang="zh-Hans">{{ site.data.lab.intro_zh }}</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button" href="{{ '/research/' | relative_url }}">Research</a>
+        <a class="button button-ghost" href="{{ '/people/' | relative_url }}">People</a>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-label="Lab facts">
+      <p class="panel-label">At a glance</p>
+      {% for person in site.data.members %}
+        {% if person.pi %}
+          <dl class="fact-list">
+            <div>
+              <dt>Principal investigator</dt>
+              <dd>{{ person.name }} <span lang="zh-Hans">{{ person.name_zh }}</span></dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd>{{ person.role }} · <span lang="zh-Hans">{{ person.role_zh }}</span></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:{{ person.email }}">{{ person.email }}</a></dd>
+            </div>
+            <div>
+              <dt>Links</dt>
+              <dd class="panel-links">
+                <a href="{{ site.data.lab.pi_site }}">Homepage</a>
+                <a href="{{ site.data.lab.github }}">GitHub</a>
+              </dd>
+            </div>
+          </dl>
+        {% endif %}
+      {% endfor %}
+    </aside>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="news-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="news-heading">Latest news</h2>
+      <a href="{{ '/news/' | relative_url }}">All news</a>
+    </div>
+    {% include news-list.html limit=3 %}
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="research-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="research-heading">Research</h2>
+      <a href="{{ '/research/' | relative_url }}">All research</a>
+    </div>
+    {% include research-areas.html home_only=true %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="papers-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="papers-heading">Selected publication</h2>
+      <a href="{{ '/publications/' | relative_url }}">All publications</a>
+    </div>
+    {% assign shown_highlight = false %}
+    {% for pub in site.data.publications %}
+      {% if pub.highlight %}
+        {% include publication.html pub=pub %}
+        {% assign shown_highlight = true %}
+      {% endif %}
+    {% endfor %}
+    {% unless shown_highlight %}
+      <p>Add a publication with <code>highlight: true</code> in <code>_data/publications.yml</code>.</p>
+    {% endunless %}
+  </div>
+</section>

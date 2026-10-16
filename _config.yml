@@ -1,0 +1,55 @@
+# Geneticode Lab — GitHub Pages (classic Jekyll builder).
+# Plugins below are on the GitHub Pages allowlist, so no Actions workflow is required.
+# https://pages.github.com/versions/
+
+title: Geneticode Lab
+tagline: Decoding genetic codes, mapping biological functions
+description: >-
+  Geneticode Lab develops computational methods that connect genetic sequence
+  to biological function, including protein function annotation and mutation effects.
+url: https://geneticode.org
+# Leave empty when the custom domain serves this site at the domain root.
+# For a temporary project URL (https://geneticodelab.github.io/index/), set "/index".
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+repository: geneticodelab/index
+
+author:
+  name: Dong Wang
+  email: csdwang@ncepu.edu.cn
+
+logo: /assets/images/mark.svg
+permalink: pretty
+markdown: kramdown
+encoding: utf-8
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /news/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - node_modules
+  - script
