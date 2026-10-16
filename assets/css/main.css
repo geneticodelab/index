@@ -13,8 +13,8 @@
   --inverse: #f6f1e8;
   --inverse-muted: #c9c2b6;
   --shadow: 0 16px 40px rgba(26, 35, 50, 0.06);
-  --sans: "Source Sans 3", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Heiti SC", sans-serif;
-  --serif: "Source Serif 4", "Noto Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+  --sans: "Source Sans 3", sans-serif;
+  --serif: "Source Serif 4", serif;
   --mono: ui-monospace, "SFMono-Regular", "Source Code Pro", Menlo, Consolas, monospace;
   --header: 4.25rem;
 }
@@ -237,13 +237,6 @@ h1, h2, h3 {
   align-items: baseline;
 }
 
-.eyebrow span[lang="zh-Hans"] {
-  letter-spacing: 0.04em;
-  text-transform: none;
-  font-weight: 600;
-  color: var(--muted);
-}
-
 h1 {
   font-size: clamp(3.1rem, 7vw, 5.4rem);
   line-height: 0.96;
@@ -256,13 +249,6 @@ h1 {
   font-weight: 500;
   line-height: 1.35;
   margin: 0;
-}
-
-.tagline-zh {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-  font-family: var(--serif);
-  font-size: 1.15rem;
 }
 
 .hero-intro {
@@ -431,13 +417,6 @@ h1 {
 .news-item h3 a:hover {
   color: var(--accent-deep);
   text-decoration: underline;
-}
-
-.news-title-zh,
-.card-zh {
-  margin-top: -0.15rem;
-  color: var(--muted);
-  font-family: var(--serif);
 }
 
 .news-item p,

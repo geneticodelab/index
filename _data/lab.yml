@@ -2,34 +2,27 @@
 # Lines starting with # are comments and are not shown on the site.
 
 name: Geneticode Lab
-# Official English tagline (also set in _config.yml). Chinese line is an editable rendering.
+# Official English tagline (also set in _config.yml).
 tagline: Decoding genetic codes, mapping biological functions
-tagline_zh: 解码遗传密码，刻画生物学功能
 
 email: csdwang@ncepu.edu.cn
 github: https://github.com/geneticodelab
 github_label: geneticodelab
 pi_name: Dong Wang
-pi_name_zh: 王东
 pi_site: https://dwang.net
 
 # University wording below is inferred from the ncepu.edu.cn email domain and from
 # author affiliations on the published S2DA-GO paper. Confirm the official English
-# and Chinese names. Department and postal address are still placeholders.
+# name. Department and postal address are still placeholders.
 affiliation:
   name_en: North China Electric Power University
-  name_zh: 华北电力大学
   short: NCEPU
   unit_en: "[Placeholder] School, department, or center"
-  unit_zh: "[占位] 学院、系或研究中心"
   unit_placeholder: true
   address_en: "[Placeholder] Campus, street, city, postal code"
-  address_zh: "[占位] 校区、街道、城市、邮编"
   address_placeholder: true
 
 intro_en: >-
   Geneticode Lab develops computational methods that read biological function
   from genetic sequence. Current work focuses on protein function annotation
   and the effects of amino-acid mutations.
-intro_zh: >-
-  Geneticode Lab 研究如何从遗传序列解读生物学功能。目前的工作集中在蛋白质功能注释，以及氨基酸突变带来的效应。

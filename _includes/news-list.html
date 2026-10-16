@@ -10,7 +10,7 @@
       <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%-d %b %Y" }}</time>
       <div>
         {% if item.placeholder %}
-          <p class="badge">Placeholder · 占位</p>
+          <p class="badge">Placeholder</p>
         {% endif %}
         {% if item.url and item.url != "" %}
           {% if item.url contains "://" %}
@@ -22,14 +22,8 @@
         {% else %}
           <h3>{{ item.title }}</h3>
         {% endif %}
-        {% if item.title_zh %}
-          <p class="news-title-zh" lang="zh-Hans">{{ item.title_zh }}</p>
-        {% endif %}
         {% if item.summary %}
           <p>{{ item.summary }}</p>
-        {% endif %}
-        {% if item.summary_zh %}
-          <p lang="zh-Hans">{{ item.summary_zh }}</p>
         {% endif %}
       </div>
     </li>

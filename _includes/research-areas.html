@@ -9,16 +9,10 @@
     {% if show_area %}
       <article class="card{% if area.placeholder %} is-placeholder{% endif %}">
         {% if area.placeholder %}
-          <p class="badge">Placeholder · 占位</p>
+          <p class="badge">Placeholder</p>
         {% endif %}
         <h3>{{ area.title }}</h3>
-        {% if area.title_zh %}
-          <p class="card-zh" lang="zh-Hans">{{ area.title_zh }}</p>
-        {% endif %}
         <p>{{ area.summary }}</p>
-        {% if area.summary_zh %}
-          <p lang="zh-Hans">{{ area.summary_zh }}</p>
-        {% endif %}
         {% if area.tags %}
           <ul class="tags">
             {% for tag in area.tags %}

@@ -1,19 +1,16 @@
 # Research cards. Shown on the Research page and, when home is true, on the home page.
 #
 # Fields:
-#   title, title_zh, summary, summary_zh, tags (list), links (list of label/url)
+#   title, summary, tags (list), links (list of label/url)
 #   home: true to feature on the home page
 #   placeholder: true to show a placeholder badge
 
 - title: Protein function prediction
-  title_zh: 蛋白质功能预测
   summary: >-
     S2DA-GO predicts Gene Ontology functions from protein sequence. A global
     sequence branch is paired with a gradient-decoupled cross-attention branch
     and with semantic priors from GO term text, so rare functional labels
     interfere less with the shared representation.
-  summary_zh: >-
-    S2DA-GO 仅依据序列预测蛋白质的基因本体功能。模型将全局序列分支与梯度解耦的交叉注意力分支结合，并引入基因本体术语的语义先验，以减轻稀有功能标签对共享表示的干扰。
   tags:
     - Gene Ontology
     - Protein language models
@@ -25,14 +22,11 @@
       url: https://github.com/geneticodelab/S2DA-GO
 
 - title: Mutation effect prediction
-  title_zh: 突变效应预测
   summary: >-
     SpaSem (Spatial–Semantic Integration) is a dual-stream model for zero-shot
     prediction of protein mutation effects. It fuses geometric structure with
     longer-range evolutionary signal so variants can be scored without building
     a new structure for every mutant. A formal citation has not been added yet.
-  summary_zh: >-
-    SpaSem（空间–语义整合）是一个用于蛋白质突变效应零样本预测的双流模型。它融合几何结构与更长程的进化信号，从而无需为每个突变体重建结构即可打分。正式引文尚未添加。
   tags:
     - Mutations
     - Sequence and structure
@@ -42,12 +36,9 @@
       url: https://github.com/geneticodelab/SpaSem
 
 - title: "[Placeholder] Next research direction"
-  title_zh: "[占位] 下一个研究方向"
   summary: >-
     Replace this card in _data/research.yml when the lab wants another public
     direction listed. Remove the entry if you do not need a spare card.
-  summary_zh: >-
-    若要公开列出新的研究方向，请在 _data/research.yml 中替换此卡片。不需要占位卡片时可删除该条目。
   tags:
     - Placeholder
   home: false
