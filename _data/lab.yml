@@ -11,18 +11,13 @@ github_label: geneticodelab
 pi_name: Dong Wang
 pi_site: https://dwang.net
 
-# University wording below is inferred from the ncepu.edu.cn email domain and from
-# author affiliations on the published S2DA-GO paper. Confirm the official English
-# name. Department and postal address are still placeholders.
 affiliation:
   name_en: North China Electric Power University
   short: NCEPU
-  unit_en: Department of Computer
-  unit_placeholder: true
-  unit_en: Yanzhao Electric Power Laboratory
-  unit_placeholder: true
-  # address_en: "[Placeholder] Campus, street, city, postal code"
-  # address_placeholder: true
+  # Add another unit on its own line, for example: - School of Example
+  units:
+    - Department of Computer
+    - Yanzhao Electric Power Laboratory
 
 intro_en: >-
   Geneticode Lab develops computational methods that read biological function
