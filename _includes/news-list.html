@@ -1,0 +1,38 @@
+{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% assign news_cap = include.limit | default: 100 %}
+{% assign news_shown = 0 %}
+<ol class="news-list">
+  {% for item in news_items %}
+    {% if news_shown >= news_cap %}
+      {% break %}
+    {% endif %}
+    <li class="news-item{% if item.placeholder %} is-placeholder{% endif %}">
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%-d %b %Y" }}</time>
+      <div>
+        {% if item.placeholder %}
+          <p class="badge">Placeholder · 占位</p>
+        {% endif %}
+        {% if item.url and item.url != "" %}
+          {% if item.url contains "://" %}
+            {% assign news_href = item.url %}
+          {% else %}
+            {% assign news_href = item.url | relative_url %}
+          {% endif %}
+          <h3><a href="{{ news_href }}">{{ item.title }}</a></h3>
+        {% else %}
+          <h3>{{ item.title }}</h3>
+        {% endif %}
+        {% if item.title_zh %}
+          <p class="news-title-zh" lang="zh-Hans">{{ item.title_zh }}</p>
+        {% endif %}
+        {% if item.summary %}
+          <p>{{ item.summary }}</p>
+        {% endif %}
+        {% if item.summary_zh %}
+          <p lang="zh-Hans">{{ item.summary_zh }}</p>
+        {% endif %}
+      </div>
+    </li>
+    {% assign news_shown = news_shown | plus: 1 %}
+  {% endfor %}
+</ol>

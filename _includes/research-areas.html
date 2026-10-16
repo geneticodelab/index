@@ -1,0 +1,41 @@
+<div class="card-grid">
+  {% for area in site.data.research %}
+    {% assign show_area = true %}
+    {% if include.home_only %}
+      {% unless area.home %}
+        {% assign show_area = false %}
+      {% endunless %}
+    {% endif %}
+    {% if show_area %}
+      <article class="card{% if area.placeholder %} is-placeholder{% endif %}">
+        {% if area.placeholder %}
+          <p class="badge">Placeholder · 占位</p>
+        {% endif %}
+        <h3>{{ area.title }}</h3>
+        {% if area.title_zh %}
+          <p class="card-zh" lang="zh-Hans">{{ area.title_zh }}</p>
+        {% endif %}
+        <p>{{ area.summary }}</p>
+        {% if area.summary_zh %}
+          <p lang="zh-Hans">{{ area.summary_zh }}</p>
+        {% endif %}
+        {% if area.tags %}
+          <ul class="tags">
+            {% for tag in area.tags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if area.links and area.links.size > 0 %}
+          <ul class="link-row">
+            {% for link in area.links %}
+              <li>
+                <a href="{{ link.url }}"{% if link.url contains "://" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

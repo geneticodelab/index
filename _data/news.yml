@@ -1,0 +1,27 @@
+# Home page "Latest news" and the News page both read this file (newest first).
+# For a longer write-up, add a Markdown file in _posts/ and point url at its permalink.
+# A post with no entry here still appears on the News page, but not on the home page.
+#
+# Fields: date, title, title_zh, summary, summary_zh, url, placeholder
+
+- date: 2026-07-08
+  title: S2DA-GO published in Frontiers in Genetics
+  title_zh: S2DA-GO 在 Frontiers in Genetics 发表
+  summary: >-
+    Sequence-based Gene Ontology function prediction from the lab is out in
+    Frontiers in Genetics. Dong Wang is a corresponding author. Code is in the
+    S2DA-GO repository.
+  summary_zh: >-
+    实验室关于基于序列的基因本体功能预测工作发表于 Frontiers in Genetics。王东为通讯作者。代码见 S2DA-GO 仓库。
+  url: /news/s2da-go-published/
+
+- date: 2026-01-28
+  title: "[Placeholder] Lab announcement"
+  title_zh: "[占位] 实验室通知"
+  summary: >-
+    Replace this item in _data/news.yml, or add a dated Markdown file under _posts/
+    and link it here.
+  summary_zh: >-
+    请在 _data/news.yml 中替换这条消息，或在 _posts/ 下新增日期开头的 Markdown 文件并在此处链接。
+  url: ""
+  placeholder: true

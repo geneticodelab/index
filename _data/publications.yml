@@ -1,0 +1,57 @@
+# Publications are grouped by year (newest year first). Within a year, keep
+# newest first. Bold the PI in author lists with Markdown: **Dong Wang**.
+#
+# 2026 records below are the papers dated 2026 or later on
+# https://scholar.google.com/citations?user=-lW5CysAAAAJ&hl=en
+# (profile sorted by date; 14 articles total, Show more disabled).
+# Scholar blocked the individual citation pages. Full names, venue, year,
+# DOI, and PDF links are from Crossref and the publisher article pages.
+#
+# Fields: title, authors, corresponding, year, venue, details, doi, url, code, pdf, citation
+# highlight: true features the paper on the home page
+
+- title: "DHST: A Deep Hybrid Structure–Topology Framework for Accurate Protein Function Prediction"
+  authors: "Bin Lu, Fujun Xiang, Hailong Wang, **Dong Wang**, Qiang Wang"
+  year: 2026
+  venue: Applied Sciences
+  details: "16 (17), 8437"
+  doi: 10.3390/app16178437
+  url: https://doi.org/10.3390/app16178437
+  pdf: https://www.mdpi.com/2076-3417/16/17/8437/pdf
+
+- title: "S2DA-GO: enhancing protein function prediction via gradient-decoupled cross-attention and semantic priors"
+  authors: "Hailong Wang, Fujun Xiang, Jin Zhang, Tingjie Wu, **Dong Wang**, Qiang Wang, Bin Lu, Feifei Fu"
+  corresponding: Dong Wang
+  year: 2026
+  venue: Frontiers in Genetics
+  details: "17, 1880976"
+  doi: 10.3389/fgene.2026.1880976
+  url: https://doi.org/10.3389/fgene.2026.1880976
+  pdf: https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2026.1880976/pdf
+  highlight: true
+  citation: "Wang H, Xiang F, Zhang J, Wu T, Wang D, Wang Q, Lu B and Fu F (2026) S2DA-GO: enhancing protein function prediction via gradient-decoupled cross-attention and semantic priors. Front. Genet. 17:1880976. doi: 10.3389/fgene.2026.1880976"
+
+- title: "SSAS-GO: structure-sequence adaptive synergy network for protein function prediction"
+  authors: "**Dong Wang**, Hailong Wang, Tao Jiang, Bin Lu, Fujun Xiang, Qiang Wang"
+  corresponding: "Dong Wang and Tao Jiang"
+  year: 2026
+  venue: Briefings in Bioinformatics
+  details: "27 (4), bbag408"
+  doi: 10.1093/bib/bbag408
+  url: https://doi.org/10.1093/bib/bbag408
+  pdf: https://academic.oup.com/bib/article-pdf/27/4/bbag408/70416712/bbag408.pdf
+  citation: "Dong Wang, Hailong Wang, Tao Jiang, Bin Lu, Fujun Xiang, Qiang Wang, SSAS-GO: structure-sequence adaptive synergy network for protein function prediction, Briefings in Bioinformatics, Volume 27, Issue 4, July 2026, bbag408, https://doi.org/10.1093/bib/bbag408"
+
+# Template:
+# - title: "Paper title"
+#   authors: "Given Family, **Dong Wang**"
+#   corresponding: ""
+#   year: 2026
+#   venue: "Journal or conference"
+#   details: ""
+#   doi: ""
+#   url: ""
+#   code: ""
+#   pdf: ""
+#   highlight: false
+#   citation: ""

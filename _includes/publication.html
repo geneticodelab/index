@@ -1,0 +1,48 @@
+{% assign pub = include.pub %}
+<article class="publication{% if pub.placeholder %} is-placeholder{% endif %}">
+  <p class="publication-year">{{ pub.year }}</p>
+  <div>
+    {% if pub.placeholder %}
+      <p class="badge">Placeholder · 占位</p>
+    {% endif %}
+    <h3>
+      {% if pub.url and pub.url != "" %}
+        <a href="{{ pub.url }}"{% if pub.url contains "://" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ pub.title }}</a>
+      {% else %}
+        {{ pub.title }}
+      {% endif %}
+    </h3>
+    {% if pub.authors %}
+      <p class="publication-authors">{{ pub.authors | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip_newlines }}</p>
+    {% endif %}
+    <p class="publication-venue">
+      {% if pub.venue %}<em>{{ pub.venue }}</em>{% endif %}
+      {% if pub.details %} {{ pub.details }}{% endif %}
+      {% if pub.year %} ({{ pub.year }}){% endif %}
+    </p>
+    {% if pub.corresponding and pub.corresponding != "" %}
+      <p class="publication-note">
+        {% if pub.corresponding contains " and " or pub.corresponding contains ";" %}
+          Corresponding authors:
+        {% else %}
+          Corresponding author:
+        {% endif %}
+        {{ pub.corresponding }}
+      </p>
+    {% endif %}
+    {% if pub.citation and pub.citation != "" %}
+      <p class="citation">{{ pub.citation }}</p>
+    {% endif %}
+    <ul class="link-row">
+      {% if pub.doi and pub.doi != "" %}
+        <li><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener noreferrer">DOI</a></li>
+      {% endif %}
+      {% if pub.code and pub.code != "" %}
+        <li><a href="{{ pub.code }}" target="_blank" rel="noopener noreferrer">Code</a></li>
+      {% endif %}
+      {% if pub.pdf and pub.pdf != "" %}
+        <li><a href="{{ pub.pdf }}" target="_blank" rel="noopener noreferrer">PDF</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</article>
