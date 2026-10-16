@@ -613,6 +613,10 @@ h1 {
   margin-bottom: 0.2rem;
 }
 
+.affiliation-units dd + dd {
+  margin-top: 0.45rem;
+}
+
 .muted {
   color: var(--muted);
   font-family: var(--sans);

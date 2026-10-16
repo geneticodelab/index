@@ -28,23 +28,25 @@ lede: Write to the principal investigator, or open the lab GitHub organization.
   <section class="card" aria-labelledby="affiliation-heading">
     <h2 id="affiliation-heading">Affiliation</h2>
     <p class="affiliation-name">{{ site.data.lab.affiliation.name_en }} <span class="muted">({{ site.data.lab.affiliation.short }})</span></p>
+    {% assign affiliation_units = site.data.lab.affiliation.units %}
+    {% assign affiliation_address = site.data.lab.affiliation.address_en | default: "" | strip %}
+    {% if affiliation_units and affiliation_units.size > 0 or affiliation_address != "" %}
     <dl class="contact-facts">
-      <div{% if site.data.lab.affiliation.unit_placeholder %} class="is-placeholder-field"{% endif %}>
-        <dt>
-          Unit
-          {% if site.data.lab.affiliation.unit_placeholder %}<span class="badge">Placeholder</span>{% endif %}
-        </dt>
-        <dd>{{ site.data.lab.affiliation.unit_en }}</dd>
+      {% if affiliation_units and affiliation_units.size > 0 %}
+      <div class="affiliation-units">
+        <dt>{% if affiliation_units.size > 1 %}Units{% else %}Unit{% endif %}</dt>
+        {% for unit in affiliation_units %}
+          <dd>{{ unit }}</dd>
+        {% endfor %}
       </div>
-      <div{% if site.data.lab.affiliation.address_placeholder %} class="is-placeholder-field"{% endif %}>
-        <dt>
-          Address
-          {% if site.data.lab.affiliation.address_placeholder %}<span class="badge">Placeholder</span>{% endif %}
-        </dt>
-        <dd>{{ site.data.lab.affiliation.address_en }}</dd>
+      {% endif %}
+      {% if affiliation_address != "" %}
+      <div>
+        <dt>Address</dt>
+        <dd>{{ affiliation_address }}</dd>
       </div>
+      {% endif %}
     </dl>
+    {% endif %}
   </section>
 </div>
-
-<p class="edit-hint">The university name is filled from the <code>ncepu.edu.cn</code> email domain and from public author affiliations on the S2DA-GO paper. Department and street address are still placeholders. Edit the wording in <code>_data/lab.yml</code> before treating it as official.</p>
