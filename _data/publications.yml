@@ -7,10 +7,11 @@
 # Scholar blocked the individual citation pages. Full names, venue, year,
 # DOI, and PDF links are from Crossref and the publisher article pages.
 #
-# Fields: title, authors, corresponding, year, venue, details, doi, url, code, pdf, citation
-# highlight: true features the paper on the home page
+# Fields: title, authors, corresponding, year, venue, details, doi, url, code, pdf, citation, selected
+# selected: true features the paper on the home page (newest selected first; if fewer than home_selected_publications are marked, the newest other papers fill the list).
 
 - title: "DHST: A Deep Hybrid Structure–Topology Framework for Accurate Protein Function Prediction"
+  selected: true
   authors: "Bin Lu, Fujun Xiang, Hailong Wang, **Dong Wang**, Qiang Wang"
   year: 2026
   venue: Applied Sciences
@@ -20,6 +21,7 @@
   pdf: https://www.mdpi.com/2076-3417/16/17/8437/pdf
 
 - title: "S2DA-GO: enhancing protein function prediction via gradient-decoupled cross-attention and semantic priors"
+  selected: true
   authors: "Hailong Wang, Fujun Xiang, Jin Zhang, Tingjie Wu, **Dong Wang**, Qiang Wang, Bin Lu, Feifei Fu"
   corresponding: Dong Wang
   year: 2026
@@ -28,10 +30,10 @@
   doi: 10.3389/fgene.2026.1880976
   url: https://doi.org/10.3389/fgene.2026.1880976
   pdf: https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2026.1880976/pdf
-  highlight: true
   citation: "Wang H, Xiang F, Zhang J, Wu T, Wang D, Wang Q, Lu B and Fu F (2026) S2DA-GO: enhancing protein function prediction via gradient-decoupled cross-attention and semantic priors. Front. Genet. 17:1880976. doi: 10.3389/fgene.2026.1880976"
 
 - title: "SSAS-GO: structure-sequence adaptive synergy network for protein function prediction"
+  selected: true
   authors: "**Dong Wang**, Hailong Wang, Tao Jiang, Bin Lu, Fujun Xiang, Qiang Wang"
   corresponding: "Dong Wang and Tao Jiang"
   year: 2026
@@ -53,5 +55,5 @@
 #   url: ""
 #   code: ""
 #   pdf: ""
-#   highlight: false
+#   selected: true
 #   citation: ""

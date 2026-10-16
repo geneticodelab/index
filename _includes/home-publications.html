@@ -1,0 +1,34 @@
+{% assign home_pub_cap = site.home_selected_publications | default: 3 %}
+{% assign home_pub_shown = 0 %}
+{% assign home_pub_years = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+{% for year_group in home_pub_years %}
+  {% if home_pub_shown >= home_pub_cap %}
+    {% break %}
+  {% endif %}
+  {% for pub in year_group.items %}
+    {% if home_pub_shown >= home_pub_cap %}
+      {% break %}
+    {% endif %}
+    {% if pub.selected %}
+      {% include publication.html pub=pub %}
+      {% assign home_pub_shown = home_pub_shown | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% for year_group in home_pub_years %}
+  {% if home_pub_shown >= home_pub_cap %}
+    {% break %}
+  {% endif %}
+  {% for pub in year_group.items %}
+    {% if home_pub_shown >= home_pub_cap %}
+      {% break %}
+    {% endif %}
+    {% unless pub.selected %}
+      {% include publication.html pub=pub %}
+      {% assign home_pub_shown = home_pub_shown | plus: 1 %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% if home_pub_shown == 0 %}
+  <p>Add papers in <code>_data/publications.yml</code> and set <code>selected: true</code> to feature them here.</p>
+{% endif %}
