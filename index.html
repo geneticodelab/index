@@ -75,18 +75,9 @@ description: >-
 <section class="section" aria-labelledby="papers-heading">
   <div class="container">
     <div class="section-head">
-      <h2 id="papers-heading">Selected publication</h2>
+      <h2 id="papers-heading">Selected publications</h2>
       <a href="{{ '/publications/' | relative_url }}">All publications</a>
     </div>
-    {% assign shown_highlight = false %}
-    {% for pub in site.data.publications %}
-      {% if pub.highlight %}
-        {% include publication.html pub=pub %}
-        {% assign shown_highlight = true %}
-      {% endif %}
-    {% endfor %}
-    {% unless shown_highlight %}
-      <p>Add a publication with <code>highlight: true</code> in <code>_data/publications.yml</code>.</p>
-    {% endunless %}
+    {% include home-publications.html %}
   </div>
 </section>

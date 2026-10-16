@@ -20,6 +20,8 @@ author:
   email: csdwang@ncepu.edu.cn
 
 logo: /assets/images/logo.png
+# Home page "Selected publications": show this many papers.
+home_selected_publications: 3
 permalink: pretty
 markdown: kramdown
 encoding: utf-8
