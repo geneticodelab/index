@@ -3,21 +3,18 @@ layout: default
 title: Geneticode Lab
 description: >-
   Decoding genetic codes, mapping biological functions. Computational biology
-  lab of Dong Wang (王东) at North China Electric Power University.
+  lab of Dong Wang at North China Electric Power University.
 ---
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">
         <span>{{ site.data.lab.affiliation.name_en }}</span>
-        <span lang="zh-Hans">{{ site.data.lab.affiliation.name_zh }}</span>
       </p>
       <h1>{{ site.title }}</h1>
       <p class="tagline">{{ site.tagline }}</p>
-      <p class="tagline-zh" lang="zh-Hans">{{ site.data.lab.tagline_zh }}</p>
       <div class="hero-intro">
         <p>{{ site.data.lab.intro_en }}</p>
-        <p lang="zh-Hans">{{ site.data.lab.intro_zh }}</p>
       </div>
       <div class="hero-actions">
         <a class="button" href="{{ '/research/' | relative_url }}">Research</a>
@@ -31,11 +28,11 @@ description: >-
           <dl class="fact-list">
             <div>
               <dt>Principal investigator</dt>
-              <dd>{{ person.name }} <span lang="zh-Hans">{{ person.name_zh }}</span></dd>
+              <dd>{{ person.name }}</dd>
             </div>
             <div>
               <dt>Role</dt>
-              <dd>{{ person.role }} · <span lang="zh-Hans">{{ person.role_zh }}</span></dd>
+              <dd>{{ person.role }}</dd>
             </div>
             <div>
               <dt>Email</dt>

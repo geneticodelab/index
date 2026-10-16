@@ -2,7 +2,6 @@
 layout: page
 title: People
 lede: The principal investigator and lab members.
-lede_zh: 课题组长与实验室成员。
 ---
 
 {% for person in site.data.members %}

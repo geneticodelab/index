@@ -2,7 +2,6 @@
 layout: page
 title: Research
 lede: Computational methods that connect sequence to biological function.
-lede_zh: 连接遗传序列与生物学功能的计算方法。
 ---
 
 {% include research-areas.html %}

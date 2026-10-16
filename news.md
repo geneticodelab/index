@@ -2,7 +2,6 @@
 layout: page
 title: News
 lede: Announcements, papers, and other lab updates.
-lede_zh: 通知、论文和其他实验室动态。
 ---
 
 {% include news-list.html %}

@@ -2,7 +2,6 @@
 layout: page
 title: Publications
 lede: Papers from the lab, grouped by year.
-lede_zh: 实验室论文，按年份分组。
 ---
 
 {% assign groups = site.data.publications | group_by: "year" | sort: "name" | reverse %}
