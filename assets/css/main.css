@@ -391,13 +391,6 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
-.news-item.is-placeholder {
-  padding: 1rem 1.1rem;
-  margin: 0.75rem 0;
-  border-top: 1px dashed #d7b2a4;
-  border-bottom: 1px dashed #d7b2a4;
-}
-
 .news-item time {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
@@ -445,8 +438,7 @@ h1 {
 
 .card,
 .member-card,
-.publication,
-.is-placeholder {
+.publication {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -621,50 +613,6 @@ h1 {
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.95rem;
-}
-
-.badge {
-  display: inline-block;
-  margin: 0 0 0.45rem;
-  padding: 0.12rem 0.5rem;
-  border-radius: 999px;
-  background: var(--clay-soft);
-  color: var(--clay);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  line-height: 1.5;
-}
-
-.is-placeholder {
-  background-color: #fffaf6;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 8px,
-    rgba(141, 59, 36, 0.035) 8px,
-    rgba(141, 59, 36, 0.035) 9px
-  );
-  border-style: dashed;
-  border-color: #d7b2a4;
-  box-shadow: none;
-}
-
-.is-placeholder-field {
-  margin-top: 0.35rem;
-  padding: 0.7rem 0.8rem;
-  border: 1px dashed #d7b2a4;
-  border-radius: 12px;
-  background: #fffaf6;
-}
-
-.edit-hint {
-  max-width: 48rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-top: 1.6rem;
 }
 
 code {

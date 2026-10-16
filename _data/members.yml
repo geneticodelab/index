@@ -6,7 +6,7 @@
 #   name, initials, role, group_role
 #   photo, email, bio, pi (true for the principal investigator)
 #   links: list of {label, url}
-#   placeholder: true shows a visible placeholder badge
+# Add another person as a new list item. Portraits go in assets/images/people/.
 
 - name: Dong Wang
   initials: DW
@@ -25,15 +25,10 @@
     - label: GitHub
       url: https://github.com/geneticodelab
 
-- name: "[Placeholder] Given Family"
-  initials: "+"
-  role: "[Placeholder] Role, for example PhD student"
-  group_role: ""
-  photo: ""
-  email: ""
-  pi: false
-  placeholder: true
-  bio: >-
-    Replace this card in _data/members.yml. To add a photo, put an image in
-    assets/images/people/ and set photo to /assets/images/people/your-file.jpg.
-  links: []
+# - name: Given Family
+#   initials: GF
+#   role: PhD student
+#   photo: /assets/images/people/given-family.jpg
+#   links:
+#     - label: Email
+#       url: mailto:name@ncepu.edu.cn

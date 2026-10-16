@@ -36,5 +36,3 @@ lede: Announcements, papers, and other lab updates.
 {% endfor %}
 </ol>
 {% endif %}
-
-<p class="edit-hint">Short items belong in <code>_data/news.yml</code> and appear on the home page. Longer notes are Markdown files in <code>_posts/</code>. Point a news entry’s <code>url</code> at a post to link them. A post with no data entry is listed on this page only.</p>

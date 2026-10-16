@@ -1,10 +1,7 @@
 {% assign pub = include.pub %}
-<article class="publication{% if pub.placeholder %} is-placeholder{% endif %}">
+<article class="publication">
   <p class="publication-year">{{ pub.year }}</p>
   <div>
-    {% if pub.placeholder %}
-      <p class="badge">Placeholder</p>
-    {% endif %}
     <h3>
       {% if pub.url and pub.url != "" %}
         <a href="{{ pub.url }}"{% if pub.url contains "://" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ pub.title }}</a>
