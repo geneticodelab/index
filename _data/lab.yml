@@ -17,10 +17,12 @@ pi_site: https://dwang.net
 affiliation:
   name_en: North China Electric Power University
   short: NCEPU
-  unit_en: "[Placeholder] School, department, or center"
+  unit_en: Department of Computer
   unit_placeholder: true
-  address_en: "[Placeholder] Campus, street, city, postal code"
-  address_placeholder: true
+  unit_en: Yanzhao Electric Power Laboratory
+  unit_placeholder: true
+  # address_en: "[Placeholder] Campus, street, city, postal code"
+  # address_placeholder: true
 
 intro_en: >-
   Geneticode Lab develops computational methods that read biological function
