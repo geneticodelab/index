@@ -7,10 +7,7 @@
       {% endunless %}
     {% endif %}
     {% if show_area %}
-      <article class="card{% if area.placeholder %} is-placeholder{% endif %}">
-        {% if area.placeholder %}
-          <p class="badge">Placeholder</p>
-        {% endif %}
+      <article class="card">
         <h3>{{ area.title }}</h3>
         <p>{{ area.summary }}</p>
         {% if area.tags %}

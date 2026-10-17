@@ -3,7 +3,12 @@
 # Fields:
 #   title, summary, tags (list), links (list of label/url)
 #   home: true to feature on the home page
-#   placeholder: true to show a placeholder badge
+# Add another direction as a new list item. Set home: true to show it on the home page.
+# Example:
+# - title: Next research direction
+#   summary: One or two sentences.
+#   home: false
+#   links: []
 
 - title: Protein function prediction
   summary: >-
@@ -34,13 +39,3 @@
   links:
     - label: Code
       url: https://github.com/geneticodelab/SpaSem
-
-- title: "[Placeholder] Next research direction"
-  summary: >-
-    Replace this card in _data/research.yml when the lab wants another public
-    direction listed. Remove the entry if you do not need a spare card.
-  tags:
-    - Placeholder
-  home: false
-  placeholder: true
-  links: []

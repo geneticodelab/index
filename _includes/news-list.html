@@ -6,12 +6,9 @@
     {% if news_shown >= news_cap %}
       {% break %}
     {% endif %}
-    <li class="news-item{% if item.placeholder %} is-placeholder{% endif %}">
+    <li class="news-item">
       <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%-d %b %Y" }}</time>
       <div>
-        {% if item.placeholder %}
-          <p class="badge">Placeholder</p>
-        {% endif %}
         {% if item.url and item.url != "" %}
           {% if item.url contains "://" %}
             {% assign news_href = item.url %}

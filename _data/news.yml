@@ -1,8 +1,13 @@
 # Home page "Latest news" and the News page both read this file (newest first).
-# For a longer write-up, add a Markdown file in _posts/ and point url at its permalink.
-# A post with no entry here still appears on the News page, but not on the home page.
+# Short items are list entries here. Longer notes are Markdown files in _posts/.
+# Set url to a post permalink to link them. A post with no entry here is listed on the News page only.
 #
-# Fields: date, title, summary, url, placeholder
+# Fields: date, title, summary, url
+# Example:
+# - date: 2026-01-28
+#   title: Lab announcement
+#   summary: One or two sentences.
+#   url: /news/lab-announcement/
 
 - date: 2026-07-08
   title: S2DA-GO published in Frontiers in Genetics
@@ -11,11 +16,3 @@
     Frontiers in Genetics. Dong Wang is a corresponding author. Code is in the
     S2DA-GO repository.
   url: /news/s2da-go-published/
-
-- date: 2026-01-28
-  title: "[Placeholder] Lab announcement"
-  summary: >-
-    Replace this item in _data/news.yml, or add a dated Markdown file under _posts/
-    and link it here.
-  url: ""
-  placeholder: true

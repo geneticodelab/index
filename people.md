@@ -10,6 +10,13 @@ lede: The principal investigator and lab members.
   {% endif %}
 {% endfor %}
 
+{% assign other_members = false %}
+{% for person in site.data.members %}
+  {% unless person.pi %}
+    {% assign other_members = true %}
+  {% endunless %}
+{% endfor %}
+{% if other_members %}
 <div class="member-grid">
   {% for person in site.data.members %}
     {% unless person.pi %}
@@ -17,5 +24,4 @@ lede: The principal investigator and lab members.
     {% endunless %}
   {% endfor %}
 </div>
-
-<p class="edit-hint">Add or edit people in <code>_data/members.yml</code>. Each entry has <code>photo</code>, <code>name</code>, <code>role</code>, and <code>links</code>. Put portraits in <code>assets/images/people/</code>.</p>
+{% endif %}

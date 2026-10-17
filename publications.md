@@ -13,5 +13,3 @@ lede: Papers from the lab, grouped by year.
     {% endfor %}
   </section>
 {% endfor %}
-
-<p class="edit-hint">Add papers in <code>_data/publications.yml</code>. They are grouped by the <code>year</code> field automatically. A commented template is at the bottom of that file.</p>
